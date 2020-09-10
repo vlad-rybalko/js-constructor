@@ -1,0 +1,31 @@
+{
+  "name": "constructor",
+  "version": "1.0.0",
+  "description": "js constructor",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlad-rybalko/js-constructor.git"
+  },
+  "keywords": [
+    "js",
+    "js",
+    "constructor"
+  ],
+  "author": "Rybalko Vladislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlad-rybalko/js-constructor/issues"
+  },
+  "homepage": "https://github.com/vlad-rybalko/js-constructor#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
