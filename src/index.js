@@ -8,15 +8,10 @@ const site = document.querySelector('#site')
 console.log(templates)
 
 model.forEach((block) => {
-  let html;
-
-  if (block.type === "title") {
-    html = templates.title(block);
-  } else if (block.type === "text") {
-    html = templates.text(block);
-  } else if (block.type === "textColums") {
-    html = templates.textColumns(block);
+  const generate = templates[block.type]
+  console.log(generate)
+  if (generate) {
+    const html = generate(block)
+    site.insertAdjacentHTML('beforeend', html)
   }
-
-  site.insertAdjacentHTML('beforeend', html)
 });
