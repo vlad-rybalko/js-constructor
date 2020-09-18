@@ -5,11 +5,8 @@ import { templates } from './templates';
 
 const site = document.querySelector('#site')
 
-console.log(templates)
-
 model.forEach((block) => {
   const generate = templates[block.type]
-  console.log(generate)
   if (generate) {
     const html = generate(block)
     site.insertAdjacentHTML('beforeend', html)
