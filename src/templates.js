@@ -1,8 +1,8 @@
 import { col, row } from './utils';
 
 function title(block) {
-const tag = block.options.tag
-const styles = block.options.styles
+  const tag = block.options.tag
+  const styles = block.options.styles
 
   return row(col(`<${tag}>${block.value}</${block.options.tag}>`), styles)
 }
@@ -18,4 +18,10 @@ function textColums(block) {
   return row(html, block.options.styles)
 }
 
-export const templates = { title, text, textColums };
+function image(block) {
+  const {alt, styles, imageStyles} = block.options
+  const html = `<img src="${block.value}" alt="${alt}" style="${imageStyles}" />`
+  return row(html, styles)
+}
+
+export const templates = { title, text, textColums, image};
