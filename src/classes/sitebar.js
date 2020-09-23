@@ -15,8 +15,8 @@ export class Sitebar {
 
     get template() {
         return [
-            block('text'),
-            block('title')
+            block('Текст'),
+            block('Заголовок')
         ].join('')
     }
 
@@ -39,10 +39,10 @@ function block(type) {
         <form name="${type}">
             <h5>${type}</h5>
             <div class="form-group">
-                <input class="form-control form-control-sm" name="value" placeholder="value">
+                <input class="form-control form-control-sm" style="margin: 0 auto" name="value" placeholder="Значение">
             </div>
             <div class="form-group">
-                <input class="form-control form-control-sm" name="styles" placeholder="styles">
+                <input class="form-control form-control-sm" name="styles" placeholder="css">
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Добавить</button>
         </form>
